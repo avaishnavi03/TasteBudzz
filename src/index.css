@@ -1,0 +1,699 @@
+body {
+  font-family: 'Outfit', sans-serif;
+}
+
+.header {
+  width: 100%;
+  padding: 12px 20px;
+  background: #f7c948;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.search-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.search-input {
+  padding: 10px;
+  width: 220px;
+  border-radius: 6px;
+  border: 1px solid lightgrey;
+  font-size: 14px;
+}
+
+.search-btn {
+  padding: 10px 18px;
+  background: white;
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-btn {
+  padding: 10px 18px;
+  background: white;
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.meal-container {
+  padding: 20px;
+}
+
+.meal-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.meal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.meal-card {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 0 5px lightgray;
+}
+
+.meal-name {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.top-container {
+  padding: 20px;
+}
+
+.top-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.top-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-left: 35px;
+}
+
+.recipe-card {
+  width: 100%;              
+  max-width: 240px;          
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.25s ease;
+}
+
+.recipe-image {
+  width: 100%;       
+  height: 150px;     
+  object-fit: cover;
+  display:block;
+}
+
+ .recipe-name {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.flexing{
+  display: flex;
+   gap: 20px;
+  font-size: 14px;
+  padding: 0px;         
+  margin-top: 0px; 
+  margin-bottom: 0px;
+  line-height: 1.5px;
+}
+
+.footer {
+  margin-top: 40px;
+  background: #f7c948;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
+
+.suggestions-box {
+  position: absolute;
+  top: 45px;
+  width: 100%;
+  background: white;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.suggestion-item {
+  margin: 5px;
+  font-size: 14px;
+  padding: 5px;
+  border-bottom: 1px solid lightgray;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background: rgb(232, 231, 231);
+}
+
+.main-img {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.full-img {
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.over-ing-ins-grid {
+  display: grid;
+  grid-template-columns: 30% 33% 37%;
+  gap: 25px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.overview {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 5px lightgray;
+}
+
+.details-name {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.overview-grid p {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+.btn-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.save-btn {
+  padding: 10px 16px;
+  background: #005278;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.icon-btn {
+  padding: 10px 14px;
+  background: white;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.ing-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.ing-checked {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.ins-step {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.step-num {
+  background: orange;
+  color: white;
+  font-weight: bold;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+@media (max-width: 1024px) {
+  .meal-grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .top-grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .recipes-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .over-ing-ins-grid {
+    grid-template-columns: 100%;
+  }
+    .header {
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .search-section {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .search-wrapper {
+    width: 70%;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .search-btn {
+    padding: 10px 16px;
+  }
+
+  .nav-buttons {
+    margin-left: auto;
+  }
+
+    .meal-grid {
+    display: flex;
+    overflow-x: scroll;
+    gap: 15px;
+    margin-left: 0;
+  }
+
+  .meal-card {
+    min-width: 150px;
+  }
+
+  .meal-container {
+    padding-left: 10px;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .meal-grid{
+     grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .top-grid{
+     grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .recipes-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .recipe-image {
+    height: 120px;
+    border-radius: 8px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .search-section {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .nav-buttons {
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .nav-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .full-img {
+    height: 260px;
+  }
+
+  .btn-row {
+    flex-wrap: wrap;
+  }
+
+  .save-btn {
+    width: 100%;
+  }
+
+  .footer {
+    padding: 14px;
+  }
+
+  .meal-title{
+     font-size: 20px;
+  }
+  .top-title{
+     font-size: 20px;
+  }
+  .recipe-title {
+    font-size: 20px;
+  }
+
+  .view-btn {
+    width: 100%;
+  }
+
+    .image-title {
+    font-size: 28px; 
+    bottom: 15px;
+    left: 15px;
+    box-shadow: 10px 10px 15px rgba(62, 61, 61, 0.3);
+  }
+
+  .overview-grid {
+    grid-template-columns: 1fr; 
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .search-section {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .search-wrapper {
+    width: 100%;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .search-btn {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 15px;
+  }
+
+  .nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .nav-btn {
+    flex: 1;
+    padding: 10px 0;
+  }
+
+    .meal-grid {
+    display: flex;
+    overflow-x: scroll;
+    gap: 12px;
+    margin-left: 0;
+  }
+
+  .meal-card {
+    min-width: 130px;
+  }
+
+  .meal-container {
+    padding-left: 10px;
+  }
+}
+
+.image-wrap {
+  position: relative;
+}
+
+.image-title {
+  position: absolute;
+  bottom: 0px;       
+  left: 5px;          
+  color: black;        
+  font-size: 42px;
+  font-weight: 700;
+  text-shadow:2px 2px#ffffff;
+  border-radius: 8px;
+  background-color: #f7c948BB;
+  padding: 10px;
+
+
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.ov-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ov-icon {
+  font-size: 24px;
+  color: orange;
+}
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.meal-scroll {
+  display: flex;
+  gap: 15px;
+  padding-bottom: 10px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.meal-card-new {
+  position: relative;
+  width: 135px;
+  height: 110px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.meal-img-new {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.meal-ontext {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.meal-text {
+  position: absolute;
+  bottom: 8px;
+  left: 12px;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.filter-btns-box {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: white;
+  border: 1px solid lightgray;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.active-btn {
+  background: #005278;
+  color: white;
+}
+
+.recipes-display-container {
+  margin-top: 25px;
+}
+
+.recipe-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 10px;
+  background: rgba(0,0,0,0.25);
+  color: white;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+  gap: 8px;
+}
+
+.page-btn {
+  padding: 8px 14px;
+  border: 1px solid lightgray;
+  background: white;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.active-page {
+  background: #005278;
+  color: white;
+}
+
+.page-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.meal-card-new {
+  position: relative;
+  width: 135px;
+  height: 110px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.meal-card-new img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center; 
+  display: block;
+}
+
+.meal-ontext {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+}
+.search-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #eef3f6;
+}
+
+.login-form {
+  width: 320px;
+  padding: 20px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.login-title {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.login-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  background: #006b8f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background: #005a78;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 4px;
+  display: block;
+}
