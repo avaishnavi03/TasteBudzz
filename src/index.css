@@ -116,7 +116,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 18px;
   /* margin-left: 35px; */
-  max-width: 1200px;
+  max-width: 1600px;
   /* margin: auto; */
 }
 
