@@ -25,7 +25,7 @@ function SearchResults() {
   const currentData = recipes.slice(start, start + itemsPerPage); 
 
   return (
-    <div className="recipes-container">
+    <div className="page-container recipes-container">
       <h2 className="recipe-title">Search "{query}"</h2>
 
       <div className="recipes-grid">

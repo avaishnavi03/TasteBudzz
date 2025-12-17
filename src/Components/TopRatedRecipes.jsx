@@ -11,16 +11,15 @@ function TopRatedRecipes() {
     setLoading(true);
     setError(null);
 
-    fetch("https://dummyjson.com/recipes")
+    fetch("https://dummyjson.com/recipes?sortBy=rating&order=desc")
       .then((res) => {
         if (!res.ok) {
           throw new Error("Failed fetching recipes");
         }
-        return res.json();
+       return  res.json();
       })
       .then((data) => {
-        const filtered = data.recipes.filter((item) => 
-        item.rating >= 4.9);
+        const filtered = data.recipes;
         setTop(filtered);
       })
       .catch((err) => {
@@ -42,7 +41,6 @@ function TopRatedRecipes() {
       <div className="top-grid">
         {top.map((item) => (
           <SmallRecipeCard key={item.id} item={item} />
-
         ))}
       </div>
     </div>

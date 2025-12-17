@@ -22,16 +22,19 @@
 }
 
 .primary-btn {
-  background-color:#005278;;
+  background-color:orange;
+  color: #1f2933; 
   border: none;
 }
 
 .secondary-btn {
-  border: 1px solid black;
-  background-color: red;
+  background-color: #005278;
+  color: #ffffff;
+  border: none;
 }
 
 .outline-btn {
-  border: 1px solid black;
   background: transparent;
+  border: 1.5px solid #005278;
+  color: #005278;
 }

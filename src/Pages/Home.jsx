@@ -13,7 +13,7 @@ function Home() {
     dispatch(setFavicon("/homeicon.png"));
   },[]);
   return (
-    <div>
+    <div className="page-container">
       <MealsType />
       {/* <TopRatedRecipes /> */}
       <RecipesDisplay />

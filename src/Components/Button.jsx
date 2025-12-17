@@ -1,9 +1,8 @@
 import React from "react";
-
 import './button.css'
 
 // primary, secondary , outline
-const Button = ({ variant = 'primary', children, ...props }) => {
+const Button = ({ variant = 'primary', children,className, ...props }) => {
     let classNames = ''
 
     switch (variant) {
@@ -16,17 +15,13 @@ const Button = ({ variant = 'primary', children, ...props }) => {
         default:
             classNames = 'primary-btn';
             break;
-
     }
-
-    return (<button className={`button ${classNames}`}
+    return (<button className={`button ${classNames} ${className}`}
         {
         ...props
         } >
         {children}
     </button>
-
     );
 };
-
 export default Button;

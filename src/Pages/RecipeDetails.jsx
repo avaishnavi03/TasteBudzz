@@ -50,7 +50,7 @@ function RecipeDetails() {
   };
 
   return (
-    <div className="details-container">
+    <div className="page-container details-container">
       <div className="main-img image-wrap">
         <img src={recipe.image} alt={recipe.name} className="full-img" />
 

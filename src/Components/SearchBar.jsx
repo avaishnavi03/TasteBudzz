@@ -6,11 +6,11 @@ function SearchBar({query, setQuery }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setDebounced(query);
+      console.log(debounced);
     }, 300);
 
-    return () => clearTimeout(timer);
-  }, [query]);
-
+  return () => clearTimeout(timer);
+}, [query]);
   return (
     <input className="search-input" type="text" placeholder="Search recipes.."
       value={query}

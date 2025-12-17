@@ -50,7 +50,7 @@ function MealTypeRecipes() {
 
   return (
     <div className="recipes-container">
-      <h2 className="recipe-title">{mealType.toUpperCase()} Recipes</h2>
+      <h2 className="recipe-title"> {mealType.charAt(0).toUpperCase() + mealType.slice(1).toLowerCase()} Recipes</h2>
 
       <div className="recipes-grid">
         {recipes.map((item) => (
@@ -65,5 +65,4 @@ function MealTypeRecipes() {
     </div>
   );
 }
-
 export default MealTypeRecipes;

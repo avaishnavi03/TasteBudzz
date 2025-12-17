@@ -1,24 +1,31 @@
 import React from "react";
+import Button from "./Button";
 // import Button from "../Components/Button";
 
 function FilterButtons({ active, onSelect }) {
   return (
     <div className="filter-btns-box">
 
-      <button varient="primary"
+      <Button
         className={active === "all" ? "filter-btn active-btn" : "filter-btn"}
         onClick={() => onSelect("all")}
       >
         All Recipes
-      </button>
+      </Button>
 
-      <button
+      <Button
         className={active === "top" ? "filter-btn active-btn" : "filter-btn"}
         onClick={() => onSelect("top")}
       >
         Top Rated Recipes
-      </button>
+      </Button>
 
+      <Button
+        className={active === "tags" ? "filter-btn active-btn" : "filter-btn"}
+        onClick={() => onSelect("tags")}
+      >
+        Recipe type
+      </Button>
     </div>
   );
 }
