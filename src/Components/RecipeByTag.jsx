@@ -61,7 +61,7 @@ export default function RecipeByTag() {
 
   return (
     <div className='tag-item-container'>
-        Select to tag to continue
+        Select the tag to continue
 
        { selectedTag && <div className="btn-row">
              <Button variant="outline">{selectedTag}</Button>

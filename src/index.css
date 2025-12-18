@@ -747,3 +747,11 @@ label {
   margin-bottom: 4px;
   display: block;
 }
+
+/* 
+@media print {
+  .btn-row,
+  .icon-btn {
+    display: none;
+  }
+} */

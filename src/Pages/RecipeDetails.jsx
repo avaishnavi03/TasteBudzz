@@ -48,12 +48,13 @@ function RecipeDetails() {
       [index]: !prev[index],
     }));
   };
-
+  const handlePrint = () => {
+    window.print();
+  };
   return (
     <div className="page-container details-container">
       <div className="main-img image-wrap">
         <img src={recipe.image} alt={recipe.name} className="full-img" />
-
         <h1 className="image-title">{recipe.name}</h1>
       </div>
 
@@ -61,14 +62,11 @@ function RecipeDetails() {
 
         <div className="overview">
           <h2 className="section-title">Recipe Overview</h2>
-
           <div className="overview-grid">
-
             <div className="ov-item">
               <LuClock className="ov-icon" /> 
               <p><strong>Prep Time:</strong> {recipe.prepTimeMinutes} mins</p>
             </div>
-
             <div className="ov-item">
               <LuFlame className="ov-icon" />
               <p><strong>Cook Time:</strong> {recipe.cookTimeMinutes} mins</p>
@@ -102,7 +100,7 @@ function RecipeDetails() {
               Save Recipe
             </Button>
 
-            <button className="icon-btn">
+            <button className="icon-btn" onClick={handlePrint}>
              <MdOutlinePrint size={20}/>
             </button>
 
