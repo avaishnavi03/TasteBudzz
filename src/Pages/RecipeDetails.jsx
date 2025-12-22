@@ -96,7 +96,6 @@ function RecipeDetails() {
           </div>
 
           <div className="btn-row noPrint">
-
             <Button variant="primary">
               Save Recipe
             </Button>

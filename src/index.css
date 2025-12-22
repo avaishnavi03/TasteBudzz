@@ -1,25 +1,25 @@
-:root{
-  --main-font:'Outfit', sans-serif;
+:root {
+  --main-font: 'Outfit', sans-serif;
 
-  --main-color:#f7c948;
-  --icon-color:orange;
-  --secondary-btn:#005278;
+  --main-color: #f7c948;
+  --icon-color: orange;
+  --secondary-btn: #005278;
 
-  --border-radius-m:6px;
-  --border-radius-s:4px;
-  --border-radius-l:8px;
+  --border-radius-m: 6px;
+  --border-radius-s: 4px;
+  --border-radius-l: 8px;
 
-  --white-color:#fff;
-  --black-color:#000;
-  --whitesmoke:whitesmoke;
+  --white-color: #fff;
+  --black-color: #000;
+  --whitesmoke: whitesmoke;
 
-  --font-size14:14px;
-  --font-size16:16px;
-  --font-size24:24px;
-  --font-size18:18px;
-  --font-size20:20px;
-  --font-size28:28px;
-  --font-size42:42px;
+  --font-size14: 14px;
+  --font-size16: 16px;
+  --font-size24: 24px;
+  --font-size18: 18px;
+  --font-size20: 20px;
+  --font-size28: 28px;
+  --font-size42: 42px;
 
 }
 
@@ -83,13 +83,13 @@ body {
   width: 220px;
   border-radius: var(--border-radius-m);
   border: 1px solid lightgrey;
-  font-size:var(--font-size14);
+  font-size: var(--font-size14);
   font-family: 'outfit';
 }
 
 .search-btn {
   padding: 10px 18px;
-  background:var(--white-color);
+  background: var(--white-color);
   border: 1px solid lightgrey;
   border-radius: var(--border-radius-m);
   cursor: pointer;
@@ -173,7 +173,7 @@ body {
 }
 
 .recipe-name {
-  font-size:var(--font-size14);
+  font-size: var(--font-size14);
   font-weight: 600;
   margin-bottom: 4px;
   color: #fff;
@@ -188,7 +188,7 @@ body {
 .flexing {
   display: flex;
   gap: 20px;
-  font-size:var(--font-size14);
+  font-size: var(--font-size14);
   padding: 0px;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -202,7 +202,7 @@ body {
   color: var(--black-color);
   text-align: center;
   padding: 16px;
-  font-size:var(--font-size14);
+  font-size: var(--font-size14);
 }
 
 .app {
@@ -223,7 +223,7 @@ body {
 
 .suggestion-item {
   margin: 5px;
-  font-size:var(--font-size14);
+  font-size: var(--font-size14);
   padding: 5px;
   border-bottom: 1px solid lightgray;
   cursor: pointer;
@@ -336,6 +336,17 @@ body {
   min-height: 28px;
 }
 
+.main-img {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.full-img {
+  width: 100%;
+  max-height: 450px;   
+  object-fit: cover;
+  border-radius: 20px;
+}
 
 @media (max-width: 1024px) {
   .meal-grid {
@@ -392,8 +403,6 @@ body {
   .meal-card {
     min-width: 150px;
   }
-
-
 }
 
 
@@ -441,7 +450,7 @@ body {
 
   .nav-btn {
     padding: 8px 12px;
-    font-size:var(--font-size14);
+    font-size: var(--font-size14);
   }
 
   .btn-row {
@@ -457,15 +466,15 @@ body {
   }
 
   .meal-title {
-    font-size:var(--font-size20);
+    font-size: var(--font-size20);
   }
 
   .top-title {
-font-size:var(--font-size20); 
- }
+    font-size: var(--font-size20);
+  }
 
   .recipe-title {
-font-size:var(--font-size20);
+    font-size: var(--font-size20);
   }
 
   .view-btn {
@@ -593,7 +602,7 @@ font-size:var(--font-size20);
 .meal-text {
   position: absolute;
   bottom: 8px;
-  left: 12px;
+  left: 32px;
   color: var(--white-color);
   font-size: var(--font-size14);
   font-weight: 600;
@@ -709,8 +718,6 @@ font-size:var(--font-size20);
 }
 
 
-
-
 .search-wrapper {
   position: relative;
   width: 100%;
@@ -735,7 +742,7 @@ font-size:var(--font-size20);
 .login-title {
   text-align: center;
   margin-bottom: 15px;
-font-size:var(--font-size20);
+  font-size: var(--font-size20);
 }
 
 .login-input {
@@ -761,7 +768,7 @@ font-size:var(--font-size20);
 }
 
 label {
-  font-size:var(--font-size14);
+  font-size: var(--font-size14);
   margin-bottom: 4px;
   display: block;
 }

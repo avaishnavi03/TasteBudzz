@@ -3,7 +3,6 @@ import SmallRecipeCard from "../ReuseComp/SmallRecipeCard";
 import Pagination from "../Components/Pagination";
 import CookingLoader from "../Components/CookingLoader";
 
-
 export default function AllRecipes() {
 
   const [recipes, setRecipes] = useState([]);
@@ -12,16 +11,10 @@ export default function AllRecipes() {
 
   const itemsPerPage = 10;
   const [currentPage, setCurrentPage] = useState(1);
-
   const [totalRecipes, setTotalRecipes] = useState(0);
-
-
-
 
   useEffect(() => {
     setLoading(true);
-
-
     const skip = (currentPage - 1) * itemsPerPage;
 
     fetch(`https://dummyjson.com/recipes?limit=${itemsPerPage}&skip=${skip}`)

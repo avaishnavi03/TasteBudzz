@@ -32,7 +32,6 @@ function MealTypeRecipes() {
     setError(null);
 
     const skip = (currentPage - 1) * itemsPerPage; 
-
     fetch(
       `https://dummyjson.com/recipes/meal-type/${mealType}?limit=${itemsPerPage}&skip=${skip}`
     )
