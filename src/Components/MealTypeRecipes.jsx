@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import SmallRecipeCard from "../ReuseComp/SmallRecipeCard";
 import { useDispatch } from "react-redux";
-import { setPageTitle } from "../utils/titleSlice";
 import Pagination from "../Components/Pagination"; 
 import CookingLoader from "../Components/CookingLoader";
+import { setPageTitle, setFavicon } from "../utils/titleSlice";
+
 
 function MealTypeRecipes() {
   const { mealType } = useParams();
@@ -18,10 +19,12 @@ function MealTypeRecipes() {
   const [currentPage, setCurrentPage] = useState(1); 
   const [totalRecipes, setTotalRecipes] = useState(0); 
 
+
   useEffect(() => {
     dispatch(
       setPageTitle(`${mealType[0].toUpperCase() + mealType.slice(1)} Recipes`)
     );
+    dispatch(setFavicon("/recipeicon.png"));
   }, [mealType]);
 
   useEffect(() => {

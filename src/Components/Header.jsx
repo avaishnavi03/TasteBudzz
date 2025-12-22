@@ -11,12 +11,18 @@ function Header() {
     navigate(`/search?q=${query}`);
   }
 
+  function goToHome(){
+    navigate("/");
+  }
+
   return (
     <header className="header">
       <img
         src="/tastebudslogo.png"
         alt="TasteBudzz Logo"
         className="header-logo"
+        onClick={goToHome}
+        style={{cursor:"pointer"}}
       />
       {/* <h2 className="logo">TasteBudzz</h2> */}
 

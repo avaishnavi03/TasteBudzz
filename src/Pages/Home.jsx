@@ -9,7 +9,7 @@ import { setPageTitle, setFavicon } from "../utils/titleSlice";
 function Home() {
   const dispatch = useDispatch();
   useEffect(()=>{
-    dispatch(setPageTitle("Home"));
+    dispatch(setPageTitle("TasteBuds"));
     dispatch(setFavicon("/homeicon.png"));
   },[]);
   return (

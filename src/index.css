@@ -1,28 +1,67 @@
+:root{
+  --main-font:'Outfit', sans-serif;
+
+  --main-color:#f7c948;
+  --icon-color:orange;
+  --secondary-btn:#005278;
+
+  --border-radius-m:6px;
+  --border-radius-s:4px;
+  --border-radius-l:8px;
+
+  --white-color:#fff;
+  --black-color:#000;
+  --whitesmoke:whitesmoke;
+
+  --font-size14:14px;
+  --font-size16:16px;
+  --font-size24:24px;
+  --font-size18:18px;
+  --font-size20:20px;
+  --font-size28:28px;
+  --font-size42:42px;
+
+}
+
 body {
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--main-font);
   margin: 0px;
+}
+
+@media print {
+
+  .noPrint,
+  header,
+  footer {
+    display: none !important;
+  }
+
+  .printOnly {
+    display: block !important;
+  }
+}
+
+
+.printOnly {
+  display: none;
 }
 
 .header {
   width: 100%;
-  /* padding: 12px 20px; */
   padding: 16px;
-  background: #f7c948;
+  background: var(--main-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
 }
+
 .header-logo {
-  height: 50px;      
+  height: 50px;
   width: auto;
   object-fit: contain;
 }
 
-/* .logo {
-  font-size: 26px;
-  font-weight: 700;
-} */
 
 .search-section {
   display: flex;
@@ -36,24 +75,23 @@ body {
 
   @media (min-width: 760px) {
     padding: 32px;
-
   }
 }
 
 .search-input {
   padding: 10px;
   width: 220px;
-  border-radius: 6px;
+  border-radius: var(--border-radius-m);
   border: 1px solid lightgrey;
-  font-size: 14px;
+  font-size:var(--font-size14);
   font-family: 'outfit';
 }
 
 .search-btn {
   padding: 10px 18px;
-  background: white;
+  background:var(--white-color);
   border: 1px solid lightgrey;
-  border-radius: 6px;
+  border-radius: var(--border-radius-m);
   cursor: pointer;
   font-weight: 500;
 }
@@ -66,15 +104,15 @@ body {
 
 .nav-btn {
   padding: 10px 18px;
-  background: white;
+  background: var(--white-color);
   border: 1px solid lightgrey;
-  border-radius: 6px;
+  border-radius: var(--border-radius-m);
   cursor: pointer;
   font-weight: 500;
 }
 
 .meal-title {
-  font-size: 24px;
+  font-size: var(--font-size24);
   margin-bottom: 20px;
 }
 
@@ -85,9 +123,9 @@ body {
 }
 
 .meal-card {
-  background: white;
+  background: var(--white-color);
   padding: 10px;
-  border-radius: 10px;
+  border-radius: var(--border-radius-l);
   text-align: center;
   cursor: pointer;
   box-shadow: 0 0 5px lightgray;
@@ -95,13 +133,12 @@ body {
 
 .meal-name {
   margin-top: 8px;
-  font-size: 16px;
+  font-size: var(--font-size16);
   font-weight: 500;
 }
 
-
 .top-title {
-  font-size: 24px;
+  font-size: var(--font-size24);
   margin-bottom: 20px;
 }
 
@@ -115,14 +152,12 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 18px;
-  /* margin-left: 35px; */
   max-width: 1600px;
-  /* margin: auto; */
 }
 
 .recipe-card {
   width: 100%;
-  border-radius: 8px;
+  border-radius: var(--border-radius-l);
   overflow: hidden;
   position: relative;
   cursor: pointer;
@@ -138,21 +173,22 @@ body {
 }
 
 .recipe-name {
-  font-size: 14px;
+  font-size:var(--font-size14);
   font-weight: 600;
   margin-bottom: 4px;
   color: #fff;
-  border-radius: 4px;
+  border-radius: var(--border-radius-s);
   width: 175px;
 }
-.recipes-container{
-  padding: 32px;
 
+.recipes-container {
+  padding: 32px;
 }
+
 .flexing {
   display: flex;
   gap: 20px;
-  font-size: 14px;
+  font-size:var(--font-size14);
   padding: 0px;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -162,11 +198,11 @@ body {
 
 .footer {
   margin-top: auto;
-  background: #f7c948;
-  color: black;
+  background: var(--main-color);
+  color: var(--black-color);
   text-align: center;
   padding: 16px;
-  font-size: 14px;
+  font-size:var(--font-size14);
 }
 
 .app {
@@ -179,15 +215,15 @@ body {
   position: absolute;
   top: 45px;
   width: 100%;
-  background: white;
+  background: var(--white-color);
   border: 1px solid lightgrey;
-  border-radius: 5px;
+  border-radius: var(--border-radius-s);
   z-index: 1;
 }
 
 .suggestion-item {
   margin: 5px;
-  font-size: 14px;
+  font-size:var(--font-size14);
   padding: 5px;
   border-bottom: 1px solid lightgray;
   cursor: pointer;
@@ -195,18 +231,6 @@ body {
 
 .suggestion-item:hover {
   background: rgb(232, 231, 231);
-}
-
-.main-img {
-  width: 100%;
-  margin-top: 15px;
-}
-
-.full-img {
-  width: 100%;
-  max-height: 450px;
-  object-fit: cover;
-  border-radius: 20px;
 }
 
 .over-ing-ins-grid {
@@ -218,7 +242,7 @@ body {
 }
 
 .overview {
-  background: white;
+  background: var(--white-color);
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 0 5px lightgray;
@@ -226,12 +250,12 @@ body {
 
 
 .details-container {
-  background-color: whitesmoke;
+  background-color: var(--whitesmoke);
 }
 
-.tags-container{
+.tags-container {
   display: flex;
-  gap:8px;
+  gap: 8px;
   max-width: 100%;
   flex-wrap: wrap;
 }
@@ -239,15 +263,16 @@ body {
 
 .details-name {
   margin-bottom: 20px;
-  font-size: 24px;
+  font-size: var(--font-size24);
   font-weight: 600;
 }
 
 .overview-grid p {
   margin: 8px 0;
-  font-size: 15px;
+  font-size: var(--font-size14);
 }
-.tag-item-container{
+
+.tag-item-container {
   gap: 16px;
   display: flex;
   flex-direction: column;
@@ -264,20 +289,20 @@ body {
 .save-btn {
   padding: 10px 16px;
   background: #005278;
-  color: white;
+  color: var(--white-color);
   border: none;
-  border-radius: 6px;
+  border-radius: var(--border-radius-m);
   cursor: pointer;
-  font-size: 15px;
+  font-size: var(--font-size14);
 }
 
 .icon-btn {
   padding: 10px 14px;
-  background: white;
+  background: var(--white-color);
   border: 1px solid lightgray;
-  border-radius: 6px;
+  border-radius: var(--border-radius-m);
   cursor: pointer;
-  font-size: 18px;
+  font-size: var(--font-size18);
 }
 
 .ing-item {
@@ -299,8 +324,8 @@ body {
 }
 
 .step-num {
-  background: orange;
-  color: white;
+  background: var(--icon-color);
+  color: var(--white-color);
   font-weight: bold;
   height: 28px;
   display: flex;
@@ -391,7 +416,7 @@ body {
 
   .recipe-image {
     height: 120px;
-    border-radius: 8px;
+    border-radius: var(--border-radius-l);
   }
 
   .header {
@@ -416,11 +441,7 @@ body {
 
   .nav-btn {
     padding: 8px 12px;
-    font-size: 14px;
-  }
-
-  .full-img {
-    height: 260px;
+    font-size:var(--font-size14);
   }
 
   .btn-row {
@@ -436,16 +457,15 @@ body {
   }
 
   .meal-title {
-    font-size: 20px;
+    font-size:var(--font-size20);
   }
 
   .top-title {
-    font-size: 20px;
-  }
+font-size:var(--font-size20); 
+ }
 
   .recipe-title {
-    font-size: 20px;
-
+font-size:var(--font-size20);
   }
 
   .view-btn {
@@ -453,7 +473,7 @@ body {
   }
 
   .image-title {
-    font-size: 28px;
+    font-size: var(--font-size28);
     bottom: 15px;
     left: 15px;
     box-shadow: 10px 10px 15px rgba(62, 61, 61, 0.3);
@@ -471,7 +491,7 @@ body {
   }
 
   .logo {
-    font-size: 24px;
+    font-size: var(--font-size24);
   }
 
   .search-section {
@@ -492,7 +512,7 @@ body {
   .search-btn {
     width: 100%;
     padding: 12px 0;
-    font-size: 15px;
+    font-size: var(--font-size14);
   }
 
   .nav-buttons {
@@ -517,8 +537,6 @@ body {
   .meal-card {
     min-width: 130px;
   }
-
-
 }
 
 .image-wrap {
@@ -529,11 +547,11 @@ body {
   position: absolute;
   bottom: 0px;
   left: 5px;
-  color: black;
-  font-size: 42px;
+  color: var(--black-color);
+  font-size: var(--font-size42);
   font-weight: 700;
   text-shadow: 2px 2px#ffffff;
-  border-radius: 8px;
+  border-radius: var(--border-radius-l);
   background-color: #f7c948BB;
   padding: 10px;
 
@@ -554,8 +572,8 @@ body {
 }
 
 .ov-icon {
-  font-size: 24px;
-  color: orange;
+  font-size: var(--font-size24);
+  color: var(--icon-color);
 }
 
 .icon-btn {
@@ -572,34 +590,12 @@ body {
   overflow-x: auto;
 }
 
-.meal-card-new {
-  position: relative;
-  width: 135px;
-  height: 110px;
-  border-radius: 12px;
-  overflow: hidden;
-  cursor: pointer;
-  flex-shrink: 0;
-}
-
-.meal-img-new {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.meal-ontext {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-}
-
 .meal-text {
   position: absolute;
   bottom: 8px;
   left: 12px;
-  color: white;
-  font-size: 15px;
+  color: var(--white-color);
+  font-size: var(--font-size14);
   font-weight: 600;
 }
 
@@ -611,8 +607,8 @@ body {
 
 .filter-btn {
   padding: 10px 16px;
-  border-radius: 8px;
-  background: white;
+  border-radius: var(--border-radius-l);
+  background: var(--white-color);
   border: 1px solid gray;
   cursor: pointer;
   font-weight: 600;
@@ -621,7 +617,7 @@ body {
 
 .active-btn {
   background: #005278;
-  color: white;
+  color: var(--white-color);
 }
 
 .recipes-display-container {
@@ -635,9 +631,8 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   padding: 8px;
-  /* background: rgba(0,0,0,0.5); */
   background-image: linear-gradient(to bottom, transparent, #000000);
-  color: white;
+  color: var(--white-color);
 }
 
 .pagination-container {
@@ -650,15 +645,15 @@ body {
 .page-btn {
   padding: 8px 14px;
   border: 1px solid lightgray;
-  background: white;
+  background: var(--white-color);
   cursor: pointer;
-  border-radius: 6px;
+  border-radius: var(--border-radius-m);
   font-weight: 500;
 }
 
 .active-page {
   background: #005278;
-  color: white;
+  color: var(--white-color);
 }
 
 .page-btn:disabled {
@@ -675,23 +670,46 @@ body {
   cursor: pointer;
 }
 
-.meal-card-new img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-
 .meal-ontext {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
-  color: white;
+  color: var(--white-color);
   display: flex;
   align-items: flex-end;
   padding: 10px;
 }
+
+
+.meal-card-new {
+  width: 135px;
+  height: 110px;
+  background: #f6efe9;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.meal-card-new:hover {
+  background: #fde6cf;
+}
+
+.meal-icon {
+  font-size: 34px;
+  color: #a97c50;
+}
+
+.meal-text {
+  font-size: var(--font-size16);
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #a97c50;
+}
+
+
+
 
 .search-wrapper {
   position: relative;
@@ -709,15 +727,15 @@ body {
 .login-form {
   width: 320px;
   padding: 20px;
-  background: white;
+  background: var(--white-color);
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: var(--border-radius-m);
 }
 
 .login-title {
   text-align: center;
   margin-bottom: 15px;
-  font-size: 22px;
+font-size:var(--font-size20);
 }
 
 .login-input {
@@ -725,16 +743,16 @@ body {
   padding: 8px;
   margin-bottom: 15px;
   border: 1px solid #bbb;
-  border-radius: 4px;
+  border-radius: var(--border-radius4);
 }
 
 .login-btn {
   width: 100%;
   padding: 10px;
   background: #006b8f;
-  color: white;
+  color: var(--white-color);
   border: none;
-  border-radius: 4px;
+  border-radius: var(--border-radius4);
   cursor: pointer;
 }
 
@@ -743,15 +761,7 @@ body {
 }
 
 label {
-  font-size: 14px;
+  font-size:var(--font-size14);
   margin-bottom: 4px;
   display: block;
 }
-
-/* 
-@media print {
-  .btn-row,
-  .icon-btn {
-    display: none;
-  }
-} */

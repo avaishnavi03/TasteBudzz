@@ -1,6 +1,6 @@
 .button {
   font-family: 'Outfit';
-  font-size: 16px;
+  font-size: var(--font-size16);
   display: flex;
   border-radius: 8px;
   min-height: 40px;
@@ -22,19 +22,19 @@
 }
 
 .primary-btn {
-  background-color:orange;
+  background-color: var(--icon-color);
   color: #1f2933; 
   border: none;
 }
 
 .secondary-btn {
-  background-color: #005278;
-  color: #ffffff;
+  background-color: var(--secondary-btn);
+  color: var(--white-color);
   border: none;
 }
 
 .outline-btn {
   background: transparent;
-  border: 1.5px solid #005278;
-  color: #005278;
+  border: 1.5px var(--secondary-btn);
+  color: var(--secondary-btn);
 }

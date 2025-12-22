@@ -16,8 +16,7 @@ import CookingLoader from "../Components/CookingLoader";
 
 function RecipeDetails() {
   const { id } = useParams();
-  const dispatch = useDispatch();
-
+  const dispatch = useDispatch()
   const [recipe, setRecipe] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -53,7 +52,7 @@ function RecipeDetails() {
   };
   return (
     <div className="page-container details-container">
-      <div className="main-img image-wrap">
+      <div className="main-img image-wrap noPrint">
         <img src={recipe.image} alt={recipe.name} className="full-img" />
         <h1 className="image-title">{recipe.name}</h1>
       </div>
@@ -61,7 +60,9 @@ function RecipeDetails() {
       <div className="over-ing-ins-grid">
 
         <div className="overview">
-          <h2 className="section-title">Recipe Overview</h2>
+        <h1 className="printOnly">{recipe.name}</h1>
+
+          <h2 className="section-title noPrint">Recipe Overview</h2>
           <div className="overview-grid">
             <div className="ov-item">
               <LuClock className="ov-icon" /> 
@@ -94,7 +95,7 @@ function RecipeDetails() {
 
           </div>
 
-          <div className="btn-row">
+          <div className="btn-row noPrint">
 
             <Button variant="primary">
               Save Recipe

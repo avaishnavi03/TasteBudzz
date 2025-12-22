@@ -4,7 +4,6 @@ import Pagination from "../Components/Pagination";
 import CookingLoader from "../Components/CookingLoader";
 import Button from "./Button";
 
-
 export default function RecipeByTag() {
 
   const [recipes, setRecipes] = useState([]);
@@ -18,7 +17,6 @@ export default function RecipeByTag() {
 
   const [totalRecipes, setTotalRecipes] = useState(0);
 
-
   useEffect(() => {
     fetch('https://dummyjson.com/recipes/tags')
       .then(data => {
@@ -29,8 +27,6 @@ export default function RecipeByTag() {
   }, [])
 
   useEffect(() => {
-
-
     const skip = (currentPage - 1) * itemsPerPage;
 
     if(!selectedTag){
@@ -39,8 +35,6 @@ export default function RecipeByTag() {
         return;
     }
     setLoading(true);
-
-
     fetch(`https://dummyjson.com/recipes/tag/${selectedTag}?limit=${itemsPerPage}&skip=${skip}`)
       .then(res => res.json())
       .then(data => {
@@ -54,7 +48,6 @@ export default function RecipeByTag() {
 
   // if (loading) return <h3>Loading...</h3>;
   if (loading) return <CookingLoader />;
-
   if (error) return <h3>Error: {error}</h3>;
 
   const totalPages = Math.ceil(totalRecipes / itemsPerPage);
