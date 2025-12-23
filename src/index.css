@@ -602,7 +602,7 @@ body {
 .meal-text {
   position: absolute;
   bottom: 8px;
-  left: 32px;
+  left: 40px;
   color: var(--white-color);
   font-size: var(--font-size14);
   font-weight: 600;
